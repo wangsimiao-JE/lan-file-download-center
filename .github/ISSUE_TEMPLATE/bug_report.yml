@@ -4,66 +4,65 @@ title: "[Bug] "
 labels: ["bug"]
 body:
   - type: markdown
-      attributes:
-            value: |
-                    Thanks for taking the time to fill out this bug report. Please attach the log file when submitting.
-                      - type: textarea
-                          id: bug-description
-                              attributes:
-                                    label: Bug Description
-                                          description: Describe the bug clearly and concisely.
-                                                placeholder: Tell us what happened...
-                                                    validations:
-                                                          required: true
-                                                            - type: markdown
-                                                                attributes:
-                                                                      value: |
-                                                                              **Log file (REQUIRED):** Please drag and drop the log file in the area below the editor. Log file name format: `GHP_LAN_Downloads_<datetime>_<16-digit-random-number>.txt`
-                                                                                - type: input
-                                                                                    id: paramiko-version
-                                                                                        attributes:
-                                                                                              label: paramiko Version
-                                                                                                    description: 'Run this command in terminal: `python -c "import paramiko; print(paramiko.__version__)"`'
-                                                                                                          placeholder: e.g. 4.0.0
-                                                                                                              validations:
-                                                                                                                    required: true
-                                                                                                                      - type: textarea
-                                                                                                                          id: expected-behavior
-                                                                                                                              attributes:
-                                                                                                                                    label: Expected Behavior
-                                                                                                                                          description: What did you expect to happen?
-                                                                                                                                                placeholder: Tell us what you expected...
-                                                                                                                                                    validations:
-                                                                                                                                                          required: true
-                                                                                                                                                            - type: textarea
-                                                                                                                                                                id: actual-behavior
-                                                                                                                                                                    attributes:
-                                                                                                                                                                          label: Actual Behavior
-                                                                                                                                                                                description: What actually happened?
-                                                                                                                                                                                      placeholder: Tell us what actually happened...
-                                                                                                                                                                                          validations:
-                                                                                                                                                                                                required: true
-                                                                                                                                                                                                  - type: textarea
-                                                                                                                                                                                                      id: steps-to-reproduce
-                                                                                                                                                                                                          attributes:
-                                                                                                                                                                                                                label: Steps to Reproduce
-                                                                                                                                                                                                                      description: Steps to reproduce the behavior.
-                                                                                                                                                                                                                            placeholder: |
-                                                                                                                                                                                                                                    1. Go to '...'
-                                                                                                                                                                                                                                            2. Click on '...'
-                                                                                                                                                                                                                                                    3. Scroll down to '...'
-                                                                                                                                                                                                                                                            4. See error
-                                                                                                                                                                                                                                                                validations:
-                                                                                                                                                                                                                                                                      required: true
-                                                                                                                                                                                                                                                                        - type: textarea
-                                                                                                                                                                                                                                                                            id: environment
-                                                                                                                                                                                                                                                                                attributes:
-                                                                                                                                                                                                                                                                                      label: Environment
-                                                                                                                                                                                                                                                                                            description: Your environment information.
-                                                                                                                                                                                                                                                                                                  placeholder: |
-                                                                                                                                                                                                                                                                                                          - Android version: 
-                                                                                                                                                                                                                                                                                                                  - Termux / ZeroTermux version: 
-                                                                                                                                                                                                                                                                                                                          - Python version: 
-                                                                                                                                                                                                                                                                                                                              validations:
-                                                                                                                                                                                                                                                                                                                                    required: false
-                                                                                                                                                                                                                                                                                                                                    
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report. Please attach the log file when submitting.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: Describe the bug clearly and concisely.
+      placeholder: Tell us what happened...
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Log file (REQUIRED):** Please drag and drop the log file in the area below the editor. Log file name format: `GHP_LAN_Downloads_<datetime>_<16-digit-random-number>.txt`
+  - type: input
+    id: paramiko-version
+    attributes:
+      label: paramiko Version
+      description: 'Run this command in terminal: `python -c "import paramiko; print(paramiko.__version__)"`'
+      placeholder: e.g. 4.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Tell us what you expected...
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Tell us what actually happened...
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your environment information.
+      placeholder: |
+        - Android version: 
+        - Termux / ZeroTermux version: 
+        - Python version: 
+    validations:
+      required: false

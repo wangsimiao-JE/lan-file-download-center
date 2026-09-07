@@ -22,6 +22,43 @@
 - HTTP 功能零额外依赖，纯标准库
 - SFTP 功能需要 `paramiko >= 4.0.0`；没装也不影响 HTTP 跑，会自动降级跳过 SFTP
 
+## Termux 环境准备
+
+跑在手机上得先装 Termux，然后把编译工具和系统依赖装齐。paramiko 底层的 cryptography 要编译，缺库直接报错。
+
+```bash
+# 更新包管理器
+pkg update && pkg upgrade
+
+# 装 Python 和编译工具链
+pkg install python python-pip clang make libffi openssl
+```
+
+如果 `pip install paramiko` 编译 cryptography 失败（常见报错 `Failed building wheel for cryptography`），有两条路：
+
+**省事的办法**：直接装 Termux 预编译的 cryptography，再装 paramiko 时跳过依赖。
+
+```bash
+pkg install python-cryptography
+pip install paramiko --no-deps
+```
+
+**硬编译的办法**：把编译工具装全，设置环境变量绕开某些报错。
+
+```bash
+pkg install clang make libffi openssl python-dev
+export CFLAGS="-Wno-error=incompatible-function-pointer-types"
+pip install paramiko
+```
+
+装完验证一下：
+
+```bash
+python -c "import paramiko; print(paramiko.__version__)"
+```
+
+能打印版本号就说明 SFTP 功能可用了。版本低于 4.0.0 的话脚本会拒绝启动 SFTP，得升级。
+
 ## 快速开始
 
 ```bash

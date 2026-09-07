@@ -65,7 +65,7 @@ python -c "import paramiko; print(paramiko.__version__)"
 # 装 SFTP 依赖（不装也能用 HTTP 部分）
 pip install paramiko
 
-# 启动
+# 启动（如果无法启动把启动命令“python3”改成“python”）
 python3 auto_rp_download.py
 ```
 

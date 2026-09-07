@@ -4,47 +4,46 @@ title: "[Feature] "
 labels: ["feature"]
 body:
   - type: markdown
-      attributes:
-            value: |
-                    Thanks for taking the time to request a new feature!
-                      - type: textarea
-                          id: feature-description
-                              attributes:
-                                    label: Feature Description
-                                          description: Describe the new feature you would like to see.
-                                                placeholder: Tell us what feature you would like...
-                                                    validations:
-                                                          required: true
-                                                            - type: textarea
-                                                                id: why-this-feature
-                                                                    attributes:
-                                                                          label: Why This Feature
-                                                                                description: Why is this feature important to you? What problem does it solve?
-                                                                                      placeholder: Tell us why you need this feature...
-                                                                                          validations:
-                                                                                                required: true
-                                                                                                  - type: textarea
-                                                                                                      id: proposed-solution
-                                                                                                          attributes:
-                                                                                                                label: Proposed Solution
-                                                                                                                      description: How do you think this feature should work?
-                                                                                                                            placeholder: Tell us how you think it should work...
-                                                                                                                                validations:
-                                                                                                                                      required: true
-                                                                                                                                        - type: input
-                                                                                                                                            id: paramiko-version
-                                                                                                                                                attributes:
-                                                                                                                                                      label: paramiko Version (if related)
-                                                                                                                                                            description: 'Run this command in terminal: `python -c "import paramiko; print(paramiko.__version__)"`'
-                                                                                                                                                                  placeholder: e.g. 4.0.0
-                                                                                                                                                                      validations:
-                                                                                                                                                                            required: false
-                                                                                                                                                                              - type: textarea
-                                                                                                                                                                                  id: additional-context
-                                                                                                                                                                                      attributes:
-                                                                                                                                                                                            label: Additional Context
-                                                                                                                                                                                                  description: Add any other context, screenshots, references, or examples about the feature request here.
-                                                                                                                                                                                                        placeholder: Add any other context...
-                                                                                                                                                                                                            validations:
-                                                                                                                                                                                                                  required: false
-                                                                                                                                                                                                                  
+    attributes:
+      value: |
+        Thanks for taking the time to request a new feature!
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Describe the new feature you would like to see.
+      placeholder: Tell us what feature you would like...
+    validations:
+      required: true
+  - type: textarea
+    id: why-this-feature
+    attributes:
+      label: Why This Feature
+      description: Why is this feature important to you? What problem does it solve?
+      placeholder: Tell us why you need this feature...
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How do you think this feature should work?
+      placeholder: Tell us how you think it should work...
+    validations:
+      required: true
+  - type: input
+    id: paramiko-version
+    attributes:
+      label: paramiko Version (if related)
+      description: 'Run this command in terminal: `python -c "import paramiko; print(paramiko.__version__)"`'
+      placeholder: e.g. 4.0.0
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, references, or examples about the feature request here.
+      placeholder: Add any other context...
+    validations:
+      required: false
